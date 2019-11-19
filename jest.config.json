@@ -1,0 +1,57 @@
+{
+    "setupFiles": ["<rootDir>/setupJest.js", "jest-localstorage-mock"],
+    "verbose": false,
+    "globals": {
+      "NODE_ENV": "test",
+      "ts-jest": {
+        "useBabelrc": true,
+        "enableTsDiagnostics": true
+      }
+    },
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/src/**/*.d.{js,ts}",
+      "!<rootDir>/stc/spec/**/*.ts"
+    ],
+    "coverageDirectory": "<rootDir>/coverage",
+    "coverageReporters": ["cobertura", "html"],
+    "coverageThreshold": {},
+    "clearMocks": true,
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/*.(test|spec).(ts|tsx|js|jsx)"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css|scss|less)$": "identity-obj-proxy",
+      "ZonedDateTime": "<rootDir>/src/common/utils/DateTime/ZonedDateTime.mock",
+      "LocalDateTime": "<rootDir>/src/common/utils/DateTime/LocalDateTime.mock"
+    },
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "modulePaths": [
+      "<rootDir>/src"
+    ],
+    "watchPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  }
