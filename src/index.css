@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.tableDeleteButton {
+  display:none;
+}
+.ReactTable .rt-tbody .rt-tr-group:hover  .tableDeleteButton{
+  display: inline-block;
+}
+
